@@ -41,31 +41,31 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 
 ### CSR configuration detailed steps :
 
-1. Configure the external interface
+- Configure the external interface
 
-  transit-pa-csr#conf t
-  
-  transit-pa-csr(config)#int gi2
-  
-  transit-pa-csr(config-if)#description external-interface
-  
-  transit-pa-csr(config-if)#ip address 172.1.3.45 255.255.255.0 <- We can get this IP from the EC2 instance (Eth1 interface) on AWS console
-  
-  transit-pa-csr(config-if)#ip nat outside
-  
-  transit-pa-csr(config-if)# no shut
-  
-  transit-pa-csr(config-if)#end
+     transit-pa-csr#conf t
+     
+     transit-pa-csr(config)#int gi2
+     
+     transit-pa-csr(config-if)#description external-interface
+     
+     transit-pa-csr(config-if)#ip address 172.1.3.45 255.255.255.0 <- We can get this IP from the EC2 instance (Eth1 interface) on AWS console
+     
+     transit-pa-csr(config-if)#ip nat outside
+     
+     transit-pa-csr(config-if)# no shut
+     
+     transit-pa-csr(config-if)#end
 
-2. Configure default route via the external interface and specific management route via the management interface:
+  - Configure default route via the external interface and specific management route via the management interface:
 
-  transit-pa-csr#conf t
-  
-  transit-pa-csr(config)#ip route 0.0.0.0 0.0.0.0 GigabitEthernet2 172.1.3.1
-  
-  transit-pa-csr(config)ip route 172.0.0.0 255.255.0.0 GigabitEthernet1 172.1.2.1 <-Please note the cidr of management VPC before creating this route
-  
-  transit-pa-csr(config)#end
+      transit-pa-csr#conf t
+      
+      transit-pa-csr(config)#ip route 0.0.0.0 0.0.0.0 GigabitEthernet2 172.1.3.1
+      
+      transit-pa-csr(config)ip route 172.0.0.0 255.255.0.0 GigabitEthernet1 172.1.2.1 <-Please note the cidr of management VPC before creating this route
+      
+      transit-pa-csr(config)#end
 
 #### Configure IPSEC tunnels and BGP sessions using the template downloaded from the AWS console
 
