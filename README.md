@@ -83,7 +83,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 
       transit-pa-csr#conf t
       
-      transit-pa-csr(config)#ip access-list extended WEBSUBET
+      transit-pa-csr(config)#ip access-list extended WEBSUBET <- This ACL captures the egress web traffic
       
       transit-pa-csr(config-ext-nacl)#permit ip 172.2.0.0 0.0.255.255 any
       
