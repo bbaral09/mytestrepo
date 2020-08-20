@@ -41,7 +41,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 
 ### CSR configuration detailed steps :
 
-#### Configure the external interface
+- Configure the external interface
 
   transit-pa-csr#conf t
   
@@ -57,7 +57,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
   
   transit-pa-csr(config-if)#end
 
-#### Configure default route via the external interface and specific management route via the management interface:
+- Configure default route via the external interface and specific management route via the management interface:
 
   transit-pa-csr#conf t
   
