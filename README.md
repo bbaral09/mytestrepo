@@ -57,7 +57,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
       
       transit-pa-csr(config-if)#end
 
-- Configure default route via the external interface and specific management route via the management interface:
+- Configure default route via the external interface and specific management route via the management interface
 
       transit-pa-csr#conf t
       
@@ -75,7 +75,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
   
       However, it is better to load the configuration in small modules for better understanding of the configurations
         
-      Remember to replace the section local-address <interface_name/private_IP_on_outside_interface> with local-address GigabitEthernet2
+      Please remember to replace the section <interface_name/private_IP_on_outside_interface> with GigabitEthernet2 
             
       Everything else can be copied/pasted as is
  
