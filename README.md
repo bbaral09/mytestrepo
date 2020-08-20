@@ -99,7 +99,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
       
       transit-pa-csr(config)#int tun1
       
-      transit-pa-csr(config-if)#ip nat inside
+      transit-pa-csr(config-if)#ip nat inside <-Assign tunnel interfaces as inside interface for NAT
       
       transit-pa-csr(config)#int tun2
       
@@ -107,7 +107,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
       
       transit-pa-csr(config)#int gi2
       
-      transit-pa-csr(config-if)#ip nat outside
+      transit-pa-csr(config-if)#ip nat outside <-Assign external interface as outside interface for NAT
 
 
 ## TGW necessary manual configuration
