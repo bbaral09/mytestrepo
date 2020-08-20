@@ -69,7 +69,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 
 - Configure IPSEC tunnels and BGP sessions using the template downloaded from the AWS console
 
-      The template creates two IPSEC tunnels and two BGP sessions over those IPSEC tunnels
+      The template provided by AWS creates two IPSEC tunnels and two BGP sessions over those IPSEC tunnels
   
       The whole configuration can loaded in one go after removing the comment lines that begin with an exclamation sign (" ! " ) 
   
