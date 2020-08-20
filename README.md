@@ -41,7 +41,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 
 ### CSR configuration detailed steps :
 
- - Configure the external interface
+- Configure the external interface
 
       transit-pa-csr#conf t
       
@@ -63,10 +63,9 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
       
       transit-pa-csr(config)#ip route 0.0.0.0 0.0.0.0 GigabitEthernet2 172.1.3.1
       
-      transit-pa-csr(config)ip route 172.0.0.0 255.255.0.0 GigabitEthernet1 172.1.2.1 <-Please note the cidr of management VPC before creating this route
+      transit-pa-csr(config)ip route 172.0.0.0 255.255.0.0 GigabitEthernet1 172.1.2.1 <-Please note the cidr of management VPC 
       
       transit-pa-csr(config)#end
-
 #### Configure IPSEC tunnels and BGP sessions using the template downloaded from the AWS console
 
   The template creates two IPSEC tunnels and two BGP sessions over those IPSEC tunnels.
