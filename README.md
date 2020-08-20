@@ -39,9 +39,9 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 3. Configure the IPSEC VPN tunnel with the TGW. The configuration template can be downloaded from the AWS console 
 4. Configure the access-list and NAT for egress traffic. Any egress traffic should be NAT'ed to the external interface
 
-Detailed steps :
+## Detailed steps :
 
-Configure the external interface
+# Configure the external interface
 
 transit-pa-csr#conf t
 
