@@ -41,7 +41,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 
 Detailed steps :
 
- 1.Configure the external interface
+Configure the external interface
 
 transit-pa-csr#conf t
 
@@ -69,26 +69,33 @@ transit-pa-csr(config)#end
 
 3. Configure IPSEC tunnels and BGP sessions using the template downloaded from the AWS console
 
-The template creates two IPSEC tunnels and two BGP sessions over those IPSEC tunnels.
+ The template creates two IPSEC tunnels and two BGP sessions over those IPSEC tunnels.
 
-The whole configuration can loaded in one go after removing the comment lines that begin with an exclamation sign (" ! " ) are removed. 
+ The whole configuration can loaded in one go after removing the comment lines that begin with an exclamation sign (" ! " ) are removed. 
+ 
+ However, it is better to load the configuration in small modules for better understanding of the configurations
 
-Everything can be copied/pasted as is, except for the following section
+ Everything can be copied/pasted as is, except for the following section
+ 
  Please replace the section local-address <interface_name/private_IP_on_outside_interface> with local-address GigabitEthernet2
 
-However, it is better to load the configuration in small modules for better understanding of the configurations
-
-4. Configure the required access-list and NAT for egress traffic
+ 
+Configure the required access-list and NAT for egress traffic
 
 transit-pa-csr#conf t
+
 transit-pa-csr(config)#ip access-list extended WEBSUBET
+
 transit-pa-csr(config-ext-nacl)#permit ip 172.2.0.0 0.0.255.255 any
+
 transit-pa-csr(config-ext-nacl)#end
 
 Configure the NAT
 
 transit-pa-csr#conf t
+
 transit-pa-csr(config)#ip nat inside source list WEBSUBET interface GigabitEthernet2 overload <-This configures daynamic NAT/PAT
+
 transit-pa-csr(config)#end
 
 Configure tunnel interfaces as nat inside interfaces and external interface(gi2) as nat outside interface
@@ -96,12 +103,15 @@ Configure tunnel interfaces as nat inside interfaces and external interface(gi2)
 transit-pa-csr#conf t
 
 transit-pa-csr(config)#int tun1
+
 transit-pa-csr(config-if)#ip nat inside
 
 transit-pa-csr(config)#int tun2
+
 transit-pa-csr(config-if)#ip nat inside
 
 transit-pa-csr(config)#int gi2
+
 transit-pa-csr(config-if)#ip nat outside
 
 
