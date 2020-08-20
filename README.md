@@ -44,13 +44,21 @@ Detailed steps :
 1.Configure the external interface
 
 transit-pa-csr#conf t
+
 transit-pa-csr(config)#int gi2
+
 transit-pa-csr(config-if)#description external-interface
+
 transit-pa-csr(config-if)#ip address 172.1.3.45 255.255.255.0 <- We can get this IP from the EC2 instance (Eth1 interface) on AWS console
+
 transit-pa-csr(config-if)#ip nat outside
+
 transit-pa-csr(config-if)#negotiation auto
+
 transit-pa-csr(config-if)#no mop enabled
+
 transit-pa-csr(config-if)# no shut
+
 transit-pa-csr(config-if)#end
 
 2. Configure default route via the external interface and specific management route via the management interface:
