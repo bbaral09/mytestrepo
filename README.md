@@ -39,7 +39,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 3. Configure the IPSEC VPN tunnel with the TGW. The configuration template can be downloaded from the AWS console 
 4. Configure the access-list and NAT for egress traffic. Any egress traffic should be NAT'ed to the external interface
 
-### CSR configuration detailed steps :
+### CSR configuration detailed steps with sample config:
 
 - Configure the external interface
 
@@ -69,15 +69,15 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 
 - Configure IPSEC tunnels and BGP sessions using the template downloaded from the AWS console
 
-      The template creates two IPSEC tunnels and two BGP sessions over those IPSEC tunnels.
+      The template creates two IPSEC tunnels and two BGP sessions over those IPSEC tunnels
   
       The whole configuration can loaded in one go after removing the comment lines that begin with an exclamation sign (" ! " ) 
   
       However, it is better to load the configuration in small modules for better understanding of the configurations
-  
-      Everything can be copied/pasted as is, except for the following section:
-  
-      Replace the section local-address <interface_name/private_IP_on_outside_interface> with local-address GigabitEthernet2
+        
+      **Replace the section local-address <interface_name/private_IP_on_outside_interface> with local-address GigabitEthernet2**
+      
+      Everything else can be copied/pasted as is
  
 - Configure the required access-list and NAT for egress traffic
 
@@ -89,15 +89,11 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
       
       transit-pa-csr(config-ext-nacl)#end
 
-- Configure the NAT
-
       transit-pa-csr#conf t
       
       transit-pa-csr(config)#ip nat inside source list WEBSUBET interface GigabitEthernet2 overload <-This configures daynamic PAT
       
       transit-pa-csr(config)#end
-
-- Configure tunnel interfaces as nat inside interfaces and external interface(gi2) as nat outside interface
 
       transit-pa-csr#conf t
       
