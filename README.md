@@ -71,14 +71,13 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 
       The template creates two IPSEC tunnels and two BGP sessions over those IPSEC tunnels.
   
-      The whole configuration can loaded in one go after removing the comment lines that begin with an exclamation sign (" ! " ). 
+      The whole configuration can loaded in one go after removing the comment lines that begin with an exclamation sign (" ! " ) 
   
       However, it is better to load the configuration in small modules for better understanding of the configurations
   
-      Everything can be copied/pasted as is, except for the following section
+      Everything can be copied/pasted as is, except for the following section:
   
-      Please replace the section local-address <interface_name/private_IP_on_outside_interface> with local-address GigabitEthernet2
-
+      Replace the section local-address <interface_name/private_IP_on_outside_interface> with local-address GigabitEthernet2
  
 - Configure the required access-list and NAT for egress traffic
 
