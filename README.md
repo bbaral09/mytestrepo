@@ -94,7 +94,7 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 
       transit-pa-csr#conf t
       
-      transit-pa-csr(config)#ip nat inside source list WEBSUBET interface GigabitEthernet2 overload <-This configures daynamic NAT/PAT
+      transit-pa-csr(config)#ip nat inside source list WEBSUBET interface GigabitEthernet2 overload <-This configures daynamic PAT
       
       transit-pa-csr(config)#end
 
