@@ -22,7 +22,7 @@ This section will walk through establish VPC attachments to allow the bastion to
     - Deploy the vpcroutes.json for the Management VPC's route to the Cisco VPC, use the Cisco VPC CIDR as the destination CIDR
     - Deploy the vpcroutes.json for the Management VPC's route to the Application VPC, use the Application VPC CIDR as the destination CIDR
 
-# Cisco and VPN for Egress Traffic Setup 
+## Cisco and VPN for Egress Traffic Setup 
 
 This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment, attaching to the TGW, creating a route table for the attachment, and configuration updates on the Cisco CSR to support the egress traffic network pattern.
 
@@ -39,9 +39,9 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
 3. Configure the IPSEC VPN tunnel with the TGW. The configuration template can be downloaded from the AWS console 
 4. Configure the access-list and NAT for egress traffic. Any egress traffic should be NAT'ed to the external interface
 
-## Detailed steps :
+### Detailed steps :
 
-# Configure the external interface
+- Configure the external interface
 
 transit-pa-csr#conf t
 
@@ -57,7 +57,7 @@ transit-pa-csr(config-if)# no shut
 
 transit-pa-csr(config-if)#end
 
-2. Configure default route via the external interface and specific management route via the management interface:
+### Configure default route via the external interface and specific management route via the management interface:
 
 transit-pa-csr#conf t
 
@@ -67,7 +67,7 @@ transit-pa-csr(config)ip route 172.0.0.0 255.255.0.0 GigabitEthernet1 172.1.2.1 
 
 transit-pa-csr(config)#end
 
-3. Configure IPSEC tunnels and BGP sessions using the template downloaded from the AWS console
+### Configure IPSEC tunnels and BGP sessions using the template downloaded from the AWS console
 
  The template creates two IPSEC tunnels and two BGP sessions over those IPSEC tunnels.
 
