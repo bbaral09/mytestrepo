@@ -1,0 +1,4 @@
+- transit-pa-ciscovpc.json: Deploys a VPC with two route tables and 6 subnets. 3 of the subnets (/24 each on the same AZ) are dedicated to Cisco CSR and other 3 subnets(/28 each on different AZ ) are reserved for future use.
+  - nameprefix: All name tags will start with this prefix
+  - cidr: CIDR for the VPC
+    - createIgw: Whether or not to create an IGW, if you need a temporary one, you can provision with this true and then perform a stack update with this value to false to remove it later
