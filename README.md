@@ -75,8 +75,8 @@ This section will walk through creating the Cisco VPC, Cisco CSR, VPN attachment
   
       However, it is better to load the configuration in small modules for better understanding of the configurations
         
-      **Replace the section local-address <interface_name/private_IP_on_outside_interface> with local-address GigabitEthernet2**
-      
+      Remember to replace the section local-address <interface_name/private_IP_on_outside_interface> with local-address GigabitEthernet2
+            
       Everything else can be copied/pasted as is
  
 - Configure the required access-list and NAT for egress traffic
