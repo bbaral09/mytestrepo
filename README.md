@@ -129,7 +129,7 @@ Since the automation of TGW route-association and route-propagation is not curre
   - cidr: CIDR for the VPC
   - createIgw: Whether or not to create an IGW, if you need a temporary one, you can provision with this true and then perform a stack update with this value to false to remove it later
 
-- transit-pa-tgw.json (**Marion**)
+- transit-pa-tgw.json (**Marion**) This is the portion  that i have changed from master.
 
 
 - vpc-singleroutetable.json: Deploys a VPC with a single route table, 6 subnets (all with the same netmask) across three availability zones, 3 of the subnets are subnets for the VPC attachments to the TGW
