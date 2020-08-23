@@ -131,6 +131,8 @@ Since the automation of TGW route-association and route-propagation is not curre
 
 - transit-pa-tgw.json (**Marion**) This is the portion  that i have changed from master.
 
+This is the portion i changed from the test branch
+
 
 - vpc-singleroutetable.json: Deploys a VPC with a single route table, 6 subnets (all with the same netmask) across three availability zones, 3 of the subnets are subnets for the VPC attachments to the TGW
   - nameprefix: All name tags will start with this prefix
