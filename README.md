@@ -10,7 +10,9 @@ The following steps should be performed in order listed here.  These instruction
 3. Deploy Cisco VPC using the transit-pa-cisco-vpc.json (See Resources section below for the parameters )
 4. Deploy Transit Gateway and VPC attachments using the transit-pa-tgw.json (See Resources section below for the parameters )
 5. Deploy VPC attachments for Management, Application, Cisco VPCs using vpc-attachment.json (**Marion**)
-6. Setup route propogation **Marion**
+6. Setup route propogation This was delted on test merge
+
+This is the merge created on test merge
 
 ## Deploy Additional AWS Foundational Resoures
 1. Create KMS keys for Secrets Manager, S3, and EBS using the kms.json (see Resources section below for paramater descriptions)
