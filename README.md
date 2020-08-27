@@ -126,7 +126,7 @@ Since the automation of TGW route-association and route-propagation is not curre
 
 1. There will be an existing network spanning accross multiple accounts
 
-2. Management VPC, APP VPC and the Cisco VPC will pre-exist
+2. Management VPC, APP VPC and the Cisco VPC (with the CSR) will pre-exist
 
 3. Bastion hosts will pre-exist 
 
@@ -136,7 +136,16 @@ Following steps should be followed in the order listed below
 
 1. Deploy Transit Gateway in the master account using the transit-pa-tgw.json
 
-2. Share the TGW with other accounts using the Resource Access Manager. See resources section for the documentation
+2. Share the TGW with other accounts using the Resource Access Manager. See the documentation here : https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-share.html
+
+3. Deploy VPC attachments for Management, Application, Cisco VPCs using the CFT vpc-attachment.json
+
+4. Configure the VPN attachment using the CFT transit-pa-cisco-vpn-attachment.json
+
+5. Configure the VPC routes using the CFT vpcroutes.json
+ 
+6. Any other necessary routing configuration on the TGW has to be done manually
+
 
 
 # Resources
