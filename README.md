@@ -124,15 +124,19 @@ Since the automation of TGW route-association and route-propagation is not curre
 
 ## Assumptions 
 
-i. There will be an existing network spanning accoross multiple accounts
-ii. Managemt VPC, APP VPC and the Cisco VPC will pre-exist
-iii. Bastion hosts will pre-exist 
+1. There will be an existing network spanning accoross multiple accounts
+
+2. Managemt VPC, APP VPC and the Cisco VPC will pre-exist
+
+3. Bastion hosts will pre-exist 
 
 ## Deployment Procedure 
 
-- Deploy Transit Gateway in the master account using the transit-pa-tgw.json
+Following steps should be followed in the order listed below
 
-- Share the TGW with other accounts using the Resource Access Manager 
+1. Deploy Transit Gateway in the master account using the transit-pa-tgw.json
+
+2. Share the TGW with other accounts using the Resource Access Manager. See resources section for the documentation
 
 
 # Resources
