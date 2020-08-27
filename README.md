@@ -120,16 +120,15 @@ Since the automation of TGW route-association and route-propagation is not curre
 2. Associate the VPN attachment with the TGW VPN route table deployed via CFT ( The CFT will deploy the VPN route table named transit-gw-cisco-vpn-route-domain )
 3. Any necessary routing configuration (association and propagation) on the TGW has to be done manually
 
+# Deployment in the existing network with multiple AWS accounts
 
-#Deployment in the existing network with multiple AWS accounts
-
-##Assumptions 
+## Assumptions 
 
 i. There will be an existing network spanning accoross multiple accounts
 ii. Managemt VPC, APP VPC and the Cisco VPC will pre-exist
 iii. Bastion hosts will pre-exist 
 
-##Deployment Procedure 
+## Deployment Procedure 
 
 - Deploy Transit Gateway in the master account using the transit-pa-tgw.json
 
