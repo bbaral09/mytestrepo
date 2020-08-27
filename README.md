@@ -121,6 +121,21 @@ Since the automation of TGW route-association and route-propagation is not curre
 3. Any necessary routing configuration (association and propagation) on the TGW has to be done manually
 
 
+#Deployment in the existing network with multiple AWS accounts
+
+##Assumptions 
+
+i. There will be an existing network spanning accoross multiple accounts
+ii. Managemt VPC, APP VPC and the Cisco VPC will pre-exist
+iii. Bastion hosts will pre-exist 
+
+##Deployment Procedure 
+
+- Deploy Transit Gateway in the master account using the transit-pa-tgw.json
+
+- Share the TGW with other accounts using the Resource Access Manager 
+
+
 # Resources
 - mgmt-vpc.json (**Marion**)
 
