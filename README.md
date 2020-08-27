@@ -124,9 +124,9 @@ Since the automation of TGW route-association and route-propagation is not curre
 
 ## Assumptions 
 
-1. There will be an existing network spanning accoross multiple accounts
+1. There will be an existing network spanning accross multiple accounts
 
-2. Managemt VPC, APP VPC and the Cisco VPC will pre-exist
+2. Management VPC, APP VPC and the Cisco VPC will pre-exist
 
 3. Bastion hosts will pre-exist 
 
