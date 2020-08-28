@@ -1,4 +1,4 @@
-| CFT         | parameters       |  Resources  |
+| CFT                 | parameters  |  Resources  |
 
 | ----------- | -----------      | ----------- |
 
