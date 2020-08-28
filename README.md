@@ -200,3 +200,9 @@ This is the portion i changed from the test branch
   - nameprefix: All name tags will start with this prefix
   - TGW: The ID of the transit gateway previously deployed using the transit-pa-tgw.json
   - Privateroutetable: ID of private route table in the Cisco vpc
+  
+  |   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
