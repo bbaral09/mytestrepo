@@ -2,7 +2,7 @@
 
 | ----------- | -----------      | ----------- |
 
-| Row 1 Col 1 | Row 1 Col 2 | Row 1 Col 3      | 
+| transit-pa-tgw.json | prefix-name | ssmtgw-name of tgw   | 
 
 
 # Pre-Requisites [HERE](https://aws.amazon.com/blogs/aws/new-for-aws-transit-gateway-build-global-networks-and-centralize-monitoring-using-network-manager)
