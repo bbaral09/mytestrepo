@@ -1,6 +1,10 @@
-| Header 1    | Header 2    | Header 3    |
-    | ----------- | ----------- | ----------- |
-    | Row 1 Col 1 | Row 1 Col 2 | Row 1 Col 3 | 
+| CFT         | parameters       |  Resources  |
+
+| ----------- | -----------      | ----------- |
+
+| Row 1 Col 1 | Row 1 Col 2 | Row 1 Col 3      | 
+
+
 # Pre-Requisites
 The following steps should be performed in order listed here.  These instructions will deploy an architecture that looks like:
 
