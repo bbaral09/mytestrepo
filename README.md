@@ -5,7 +5,7 @@
 | Row 1 Col 1 | Row 1 Col 2 | Row 1 Col 3      | 
 
 
-# Pre-Requisites
+# Pre-Requisites [HERE]<https://aws.amazon.com/blogs/aws/new-for-aws-transit-gateway-build-global-networks-and-centralize-monitoring-using-network-manager/>
 The following steps should be performed in order listed here.  These instructions will deploy an architecture that looks like:
 
 ## Deploy VPCs
